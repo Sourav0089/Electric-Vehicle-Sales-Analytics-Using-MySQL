@@ -1,14 +1,25 @@
-📌 Project Summary:-
+A Data Warehouse project in MySQL designed to analyze India’s Electric Vehicle (EV) sales from 2014–2024.
+It demonstrates data modeling, ETL, analytical SQL, and insights generation on real-world datasets.
 
-Designed and implemented a Data Warehouse in MySQL to analyze India’s Electric Vehicle (EV) sales dataset (2014–2024).
+🎯 Objectives
+✅ Designed Star Schema (Fact + Dimensions)
 
-🔹 Objectives
-✅ Built a Star Schema (Fact + Dimensions)
 ✅ Performed ETL using SQL scripts
-✅ Wrote advanced analytical queries (window functions, CTEs, stored procedures, views).
-✅ Delivered insights such as yearly growth trends, state-wise adoption, vehicle category analysis.
 
-🏗️ Database Schema (Star Schema)
+✅ Wrote advanced analytical queries (CTEs, Window Functions, Stored Procedures, Views)
+
+✅ Generated business insights: growth trends, state-wise adoption, category analysis
+
+🏗️ Database Schema
+Star Schema Design
+
+lua
+Copy code
+   dim_date        dim_state        dim_vehicle
+      |               |                 |
+      |               |                 |
+      +--------- fact_ev_sales ---------+
+Tables
 
 staging_ev_sales → Raw dataset
 
@@ -20,101 +31,85 @@ dim_vehicle → Vehicle class, category, type
 
 fact_ev_sales → Central fact table storing sales quantities
 
-Used Primary Keys, Foreign Keys, Unique Constraints.
+✔️ Implemented Primary Keys, Foreign Keys, and Unique Constraints
 
-ERD (Entity Relationship Diagram):
+🔑 Key SQL Features
+🗂️ Database Design
+Star Schema (Fact + Dimensions)
 
+Normalization + Constraints
 
-   dim_date        dim_state        dim_vehicle
-      |               |                 |
-      |               |                 |
-      +--------- fact_ev_sales ---------+
+🔄 ETL Process
+INSERT … SELECT for staging → dimensions → fact
 
+📊 Analytical Queries
+Window Functions: ROW_NUMBER, RANK, LAG
 
+Growth % calculations
 
-🔹 Key SQL Features Demonstrated
+Top-N ranking queries (Top states per year)
 
-Database Design
+Cumulative adoption analysis
 
-Normalization (star schema).
+⚙️ Advanced SQL
+CTEs → Modular queries
 
-Constraints (PK, FK, Unique).
+Views → Dashboard-ready
 
-ETL Process
+Stored Procedures → Parameterized analysis
 
-INSERT … SELECT for populating dimensions & fact.
+🛠️ Tools Used
+MySQL → Data warehouse design & queries
 
-Analytical Queries
+Power BI (optional) → Visualization dashboards
 
-Window functions (LAG, ROW_NUMBER).
+Excel / Python → CSV cleaning & preprocessing
 
-Ranking (Top N states per year).
+🚀 How to Run
+Import dataset → staging_ev_sales
 
-Growth % calculations.
+Run table creation scripts (dim_*, fact_ev_sales)
 
-Advanced SQL
+Populate dimensions & fact with ETL scripts
 
-CTEs (modular queries).
+Execute analysis queries (analysis_queries.sql)
 
-Views (dashboard-ready).
+(Optional) Connect MySQL → Power BI for dashboards
 
-Stored Procedures (parameterized analysis).
+📊 Example Analysis Queries
+✅ Total EV sales by year
 
-🔹 Tools Used
+✅ Top 5 states by EV adoption
 
-MySQL (database design & queries)
-Power BI (optional) (visualization)
-Excel / Python (CSV cleaning before loading)
+✅ EV category market share (2W, 3W, 4W, Buses, Others)
 
-🔹 How to Run
+✅ Year-over-Year growth %
 
-Import dataset into staging_ev_sales.
+✅ Cumulative EV adoption trend
 
-Run table creation scripts (dim_*, fact_ev_sales).
+✅ Peak sales months by year
 
-Populate dimensions & fact using ETL scripts.
-
-Run analysis queries (analysis_queries.sql).
-
-(Optional) Connect MySQL → Power BI.
-
-📊 Key Analysis Queries
-
-Total EV sales by year
-
-Top 5 states by EV adoption
-
-EV category market share (2W, 3W, 4W, Buses, Others)
-
-Year-over-Year growth with window functions
-
-Cumulative EV adoption trend
-
-Peak sales months by year
-
-Top states per year (ranking with ROW_NUMBER)
-
-Market share by vehicle type annually
+✅ Market share by vehicle type annually
 
 💡 Business Insights
+📈 Strong YoY Growth → Double-digit growth in recent years
 
-Strong YoY Growth → EV adoption has grown rapidly, with double-digit YoY growth in most recent years.
+🏆 Top 5 States Dominate → Uttar Pradesh, Maharashtra, Karnataka, Delhi, Rajasthan
 
-Top 5 States Dominate → A handful of states (Uttar Pradesh, Maharashtra, Karnataka, Delhi, Rajasthan) contribute a large % of national EV sales.
+🛵 2W Lead Adoption → Affordable & convenient, driving EV penetration
 
-Two-Wheelers Lead Adoption → EV adoption is driven mainly by 2-wheelers (affordable & convenient for urban mobility).
+📅 Seasonality Exists → Festive seasons & policy pushes create sales spikes
 
-Seasonality Exists → Certain months (festive seasons, policy incentive announcements) show peak sales.
-
-Uneven State Adoption → Some states have very low or inconsistent sales, highlighting the need for policy push.
+⚖️ Uneven Adoption → Some states lag, needing targeted infrastructure
 
 📌 Recommendations
+For Policymakers → Expand charging infra in low-adoption states
 
-For Policymakers → Focus on EV infrastructure (charging stations) in low-adoption states to balance adoption.
+For Manufacturers → Focus on 2W, but invest in 4W & buses
 
-For Manufacturers → Continue focusing on 2W segment, but invest in 4W and buses for long-term sustainability.
+For Businesses → Prioritize top states with EV financing & incentives
 
-For Businesses → Target top states with aggressive EV financing & incentives.
+For Investors → 2W & 3W categories show high ROI opportunities
 
-For Investors → EV adoption is on a strong growth trajectory; 2W and 3W categories present high ROI opportunities.
-
+✨ This project showcases end-to-end Data Warehousing + Analytics using SQL.
+Perfect for data engineering, analytics, and business intelligence portfolios.
