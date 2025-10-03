@@ -1,0 +1,21 @@
+📊 Business Questions for EV Sales Analysis
+
+1. What is the total number of electric vehicles sold across all years?
+
+2. How have EV sales trended on a yearly basis?
+
+3. Which states contribute the most to EV adoption (Top 5 states by total sales)?
+
+4. Which states are lagging in EV adoption (Bottom 5 states by total sales)?
+
+5. What are the monthly sales trends, and do any seasonal patterns emerge?
+
+6. What is the year-over-year growth rate of EV sales?
+
+7. How do different vehicle categories (2W, 3W, 4W, etc.) contribute to overall EV adoption?
+
+8. Which states demonstrate the highest growth momentum in EV adoption each year (Top 3 states per year)?
+
+9. Which states consistently underperform in EV adoption each year (Bottom 3 states per year)?
+
+10.In which years did EV sales surpass the 100,000-unit benchmark, indicating rapid adoption?
