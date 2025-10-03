@@ -1,7 +1,8 @@
 A Data Warehouse project in MySQL designed to analyze India’s Electric Vehicle (EV) sales from 2014–2024.
 It demonstrates data modeling, ETL, analytical SQL, and insights generation on real-world datasets.
 
-🎯 Objectives
+🎯 Objectives:-
+
 ✅ Designed Star Schema (Fact + Dimensions)
 
 ✅ Performed ETL using SQL scripts
@@ -10,16 +11,16 @@ It demonstrates data modeling, ETL, analytical SQL, and insights generation on r
 
 ✅ Generated business insights: growth trends, state-wise adoption, category analysis
 
-🏗️ Database Schema
+🏗️ Database Schema:-
+
 Star Schema Design
 
-lua
-Copy code
    dim_date        dim_state        dim_vehicle
       |               |                 |
       |               |                 |
       +--------- fact_ev_sales ---------+
-Tables
+
+Tables:-
 
 staging_ev_sales → Raw dataset
 
@@ -34,15 +35,18 @@ fact_ev_sales → Central fact table storing sales quantities
 ✔️ Implemented Primary Keys, Foreign Keys, and Unique Constraints
 
 🔑 Key SQL Features
-🗂️ Database Design
+
+🗂️ Database Design:-
+
 Star Schema (Fact + Dimensions)
 
 Normalization + Constraints
 
-🔄 ETL Process
+🔄 ETL Process:-
+
 INSERT … SELECT for staging → dimensions → fact
 
-📊 Analytical Queries
+📊 Analytical Queries:-
 Window Functions: ROW_NUMBER, RANK, LAG
 
 Growth % calculations
@@ -51,21 +55,24 @@ Top-N ranking queries (Top states per year)
 
 Cumulative adoption analysis
 
-⚙️ Advanced SQL
+⚙️ Advanced SQL:-
+
 CTEs → Modular queries
 
 Views → Dashboard-ready
 
 Stored Procedures → Parameterized analysis
 
-🛠️ Tools Used
+🛠️ Tools Used:-
+
 MySQL → Data warehouse design & queries
 
 Power BI (optional) → Visualization dashboards
 
 Excel / Python → CSV cleaning & preprocessing
 
-🚀 How to Run
+🚀 How to Run:-
+
 Import dataset → staging_ev_sales
 
 Run table creation scripts (dim_*, fact_ev_sales)
@@ -76,7 +83,8 @@ Execute analysis queries (analysis_queries.sql)
 
 (Optional) Connect MySQL → Power BI for dashboards
 
-📊 Example Analysis Queries
+📊 Example Analysis Queries:-
+
 ✅ Total EV sales by year
 
 ✅ Top 5 states by EV adoption
@@ -91,7 +99,8 @@ Execute analysis queries (analysis_queries.sql)
 
 ✅ Market share by vehicle type annually
 
-💡 Business Insights
+💡 Business Insights:-
+
 📈 Strong YoY Growth → Double-digit growth in recent years
 
 🏆 Top 5 States Dominate → Uttar Pradesh, Maharashtra, Karnataka, Delhi, Rajasthan
@@ -102,7 +111,8 @@ Execute analysis queries (analysis_queries.sql)
 
 ⚖️ Uneven Adoption → Some states lag, needing targeted infrastructure
 
-📌 Recommendations
+📌 Recommendations:-
+
 For Policymakers → Expand charging infra in low-adoption states
 
 For Manufacturers → Focus on 2W, but invest in 4W & buses
